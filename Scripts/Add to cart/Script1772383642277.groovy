@@ -16,6 +16,9 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
+import com.kms.katalon.core.util.KeywordUtil
+
+KeywordUtil.logInfo("Login test excecuted")
 
 WebUI.openBrowser('https://www.saucedemo.com/')
 
@@ -27,7 +30,7 @@ WebUI.setText(findTestObject('LoginPage/password_input'), 'secret_sauce')
 
 WebUI.click(findTestObject('LoginPage/login_button'))
 
-WebUI.click(findTestObject('Inventory/dropdown_sort'), FailureHandling.STOP_ON_FAILURE)
+WebUI.click(findTestObject('Inventory/button_addToCart'), FailureHandling.STOP_ON_FAILURE)
 
-WebUI.verifyElementText(findTestObject('Inventory/dropdown_sort'), '1')
+WebUI.verifyElementText(findTestObject('Inventory/icon_cart'), '1')
 

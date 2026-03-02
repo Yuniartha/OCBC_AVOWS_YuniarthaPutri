@@ -17,6 +17,9 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+import com.kms.katalon.core.util.KeywordUtil
+
+KeywordUtil.logInfo("Login test excecuted")
 WebUI.openBrowser('https://www.saucedemo.com/')
 
 WebUI.maximizeWindow()
